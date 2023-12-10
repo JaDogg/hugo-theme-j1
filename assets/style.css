@@ -857,3 +857,72 @@ nav.navigation a:hover {
 #callout.Tip h3::before {
   content: "🕵🏼";
 }
+
+
+
+.center-text {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center
+}
+
+/* Add this style for all status spans */
+.blue-status::before,
+.red-status::before,
+.green-status::before,
+.yellow-status::before {
+  content: ''; /* Empty content to create a space for the emoji */
+  display: inline-block;
+  margin-right: 5px; /* Adjust the spacing between emoji and text */
+  font-size: 1.2em; /* Adjust the size of the emoji */
+}
+
+/* Define the emojis for each status */
+.blue-status::before {
+  content: '😐'; /* Emoji for blue status */
+}
+
+.red-status::before {
+  content: '😱'; /* Emoji for red status */
+}
+
+.green-status::before {
+  content: '👍'; /* Emoji for green status */
+}
+
+.yellow-status::before {
+  content: '😅'; /* Emoji for yellow status */
+}
+
+
+.blue-status,
+.red-status,
+.green-status,
+.yellow-status {
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 6px; /* Minimal border radius */
+  padding: 0 5px;
+  margin: auto 2px;
+  font-size: .8em;
+}
+
+.blue-status {
+  background: #007acc; /* Increased contrast */
+  color: #ffffff;
+}
+
+.red-status {
+  background: #a30000; /* Increased contrast */
+  color: #ffffff;
+}
+
+.green-status {
+  background: #007a00; /* Increased contrast */
+  color: #ffffff;
+}
+
+.yellow-status {
+  background: #b58c00; /* Increased contrast */
+  color: #ffffff;
+}
