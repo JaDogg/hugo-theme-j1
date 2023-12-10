@@ -1,6 +1,8 @@
 The MIT License (MIT)
 
 Copyright (c) 201-present [nodejh](http://nodejh.com)
+Copyright (c) xNaCly
+Copyright (c) 2020 - 2023 Bhathiya Perera
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
