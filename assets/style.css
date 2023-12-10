@@ -269,8 +269,6 @@ pre {
 /* navigation */
 
 nav.navigation {
-  padding: 20px 20px 0;
-  /*background: var(--background-sec);*/
   margin: 0 auto;
   text-align: right;
   z-index: 100;
