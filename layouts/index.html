@@ -1,4 +1,4 @@
-{{ define "main" }} {{ partial "profile.html" . }}
+{{ define "main" }}
 <div id="list-page">
   {{ $pages := .Site.RegularPages }} {{ $paginator := .Paginate ($pages) }} {{
   range $paginator.Pages }} {{ $title := .Title }} {{ $summary := .Summary }}

@@ -1,13 +1,15 @@
 <header class="profile">
-	{{ if .Site.Params.avatarLink }}
-	<a href="{{ .Site.Params.avatarLink }}">
-		<img class="avatar" alt="avatar" src="{{ "/images/avatar.webp" | relURL }}" />
-	</a>
-	{{ else }} <img class="avatar" alt="avatar" src="{{ "/images/avatar.webp" | relURL }}" /> {{ end }}
 
-	<h1>{{ .Site.Title }}</h1>
+    {{ if .Site.Params.avatarLink }}
+    <a href="{{ .Site.Params.avatarLink }}">
+        <img class="avatar" alt="avatar" src="{{ "/images/avatar.jpg" | relURL }}" />
+    </a>
+    {{ else }} <img class="avatar" alt="avatar" src="{{ "/images/avatar.jpg" | relURL }}" /> {{ end }}
 
-	{{ if .Site.Social }} {{ partial "social.html" . }} {{ end }} {{ with .Site.Params.Bio }}
-	<h2>{{ . | markdownify }}</h2>
-	{{ end }}
+    <h1 style="color: black">{{ .Site.Title }}</h1>
+
+    {{ with .Site.Params.Bio }}
+    <small style="color: darkslategray">{{ . | markdownify }}</small>
+    {{ end }}
+
 </header>

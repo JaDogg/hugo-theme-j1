@@ -1,5 +1,7 @@
-@import "css/light.css" screen;
+
+@import "css/light.css" screen and (prefers-color-scheme: light);
 @import "css/dark.css" screen and (prefers-color-scheme: dark);
+@import "css/7.scoped.css" screen;
 /* xnacly's custom vars */
 :root {
   --spacing: 0.5rem;
@@ -160,7 +162,7 @@ hr {
   display: block;
   border: none;
   height: 2px;
-  margin: 40px auto;
+  margin: 5px auto;
   background: var(--background-third);
 }
 
@@ -268,7 +270,7 @@ pre {
 
 nav.navigation {
   padding: 20px 20px 0;
-  background: var(--background-sec);
+  /*background: var(--background-sec);*/
   margin: 0 auto;
   text-align: right;
   z-index: 100;
@@ -355,14 +357,36 @@ nav.navigation a:hover {
   color: var(--primary);
   cursor: pointer;
 }
+
 #footer .split:hover {
   color: #ff3356;
   transition: 0.7s ease-out;
   cursor: pointer;
 }
 
-#social a {
-  margin: 0 4px;
+#nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 24px 24px;
+}
+
+#social {
+  text-align: center !important;
+}
+
+#social-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 130px;
+}
+
+#social-child a {
+  margin: auto;
 }
 
 /* main content */
@@ -575,7 +599,7 @@ nav.navigation a:hover {
   background: var(--background-third);
   border-radius: calc(var(--spacing) / 2);
   padding: 4px 7px;
-  color: #999;
+  color: var(--text-secondary);
   font-size: 14px;
   margin-right: 3px;
 }

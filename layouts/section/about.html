@@ -1,14 +1,16 @@
 {{ define "main" }}
-{{ partial "profile.html" . }}
 
 <section id="section">
-    <h3>ABOUT ME</h3>
+
     <div class="content-container">
         {{ .Content }}
     </div>
+    {{ if eq .Site.Params.iHasSkill true }}
     <h3>SKILLS</h3>
     {{ partial "skillcontainer.html" . }}
     <h3>PROJECTS</h3>
     {{ partial "projectcontainer.html" . }}
+    {{ end }}
+
 </section>
 {{ end }}

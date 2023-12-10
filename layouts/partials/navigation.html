@@ -1,8 +1,21 @@
-<nav class="navigation">
-	{{ if not .IsHome }}
-		<a href="{{ "/" | relURL }}"> <span class="arrow"></span>~</a>
-	{{ end }}
-	<a href="{{ "/posts/" | relURL }}">~/archive</a>
-	<a href="{{ "/tags/" | relURL }}">~/tags</a>
-	<a href="{{ "/about/" | relURL }}">~/about</a>
-</nav>
+<div class="win7" id="nav-container">
+    <div class="window active" style="max-width: 400px">
+        <div class="title-bar">
+            <div class="title-bar-text">🤓 Hi</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body has-space">
+            {{ partial "profile.html" . }}
+            <nav class="navigation">
+                <a href="{{ "/" | relURL }}">J:\Home</a>
+                <a href="{{ "/posts/" | relURL }}">J:\Posts</a>
+                <a href="{{ "/tags/" | relURL }}">J:\Tags</a>
+                <a href="{{ "/about/" | relURL }}">J:\About</a>
+            </nav>
+        </div>
+    </div>
+</div>
